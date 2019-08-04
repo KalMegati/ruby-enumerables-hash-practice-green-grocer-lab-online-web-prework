@@ -20,10 +20,13 @@ def apply_coupons(cart, coupons)
   coupons.length.times { |index|
     if cart.key?(coupons[index][:item])
       cart[coupons[index][:item]][:count] -= coupons[index][:num]
-      cart[coupons[index][:item] + " W/COUPON"] = {
-        price: coupons[index][:cost] / coupons[index][:num],
-        clearance: cart[coupons[index][:item]][:clearance],
-        count: coupons[index][:num]
+      if cart.key?(coupons[index][:item] + " W/COUPON")
+        cart[coupons[index][:item] + " W/COUPON"][:count] += coupons[index][:num]
+      else  
+        cart[coupons[index][:item] + " W/COUPON"] = {
+          price: coupons[index][:cost] / coupons[index][:num],
+          clearance: cart[coupons[index][:item]][:clearance],
+          count: coupons[index][:num]
       }
     end
   }
