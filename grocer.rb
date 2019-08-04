@@ -41,7 +41,9 @@ def apply_clearance(cart)
 end
 
 def register(cart)
-  receipt = cart.reduce
+  receipt = cart.reduce(0) { |memo, (key, value)
+    
+  }
 end  
   
 firstmost_name = bands.reduce(nil) do |memo, (key, value)|
