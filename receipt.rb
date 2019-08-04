@@ -59,11 +59,11 @@ def checkout(cart, coupons)
   cart_2 = consolidate_cart(cart)
 binding.pry
   apply_coupons(cart_2, coupons)
-
+binding.pry
   apply_clearance(cart_2)
-
+binding.pry
   receipt = register(cart_2)
-  
+binding.pry
   puts receipt
   return receipt
 end
