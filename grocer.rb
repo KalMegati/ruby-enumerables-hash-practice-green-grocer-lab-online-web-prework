@@ -41,14 +41,12 @@ def apply_clearance(cart)
 end
 
 def register(cart)
-  receipt = cart.reduce(0) { |memo, (key, value)|
+  mathsplosion = cart.reduce(0) { |memo, (key, value)|
     memo += (value[:price] * value[:count])
   }
+  receipt = mathsplosion.round(2)
+  return receipt
 end  
-  
-firstmost_name = bands.reduce(nil) do |memo, (key, value)|
-  # On the first pass, we don't have a name, so just grab the first one.
-  memo = value[0] if !memo  
 
 def checkout(cart, coupons)
   cart_2 = consolidate_cart(cart)
@@ -57,7 +55,8 @@ def checkout(cart, coupons)
   puts cart_2
   apply_clearance(cart_2)
   puts cart_2
-  
+  register(cart_2)
+  puts receipt
 end
 
 cart = [
