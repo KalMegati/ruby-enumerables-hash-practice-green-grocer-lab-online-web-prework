@@ -55,7 +55,7 @@ def checkout(cart, coupons)
   puts cart_2
   apply_clearance(cart_2)
   puts cart_2
-  register(cart_2)
+  receipt = register(cart_2)
   puts receipt
 end
 
