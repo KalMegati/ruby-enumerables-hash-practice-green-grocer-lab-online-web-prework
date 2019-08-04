@@ -59,6 +59,7 @@ def checkout(cart, coupons)
   apply_clearance(cart_2)
 
   receipt = register(cart_2)
+  
   return receipt
 end
 
