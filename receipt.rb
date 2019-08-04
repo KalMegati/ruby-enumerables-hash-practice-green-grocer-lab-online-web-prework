@@ -73,7 +73,9 @@ cart = [
   {"BEER" => {:price => 13.00, :clearance => false}}
 ]
 
-coupons = [beer_coupon, beer_coupon]
-        expect(checkout(cart, coupons)).to eq(33.00)
-      end
-    end
+coupons = [
+  {:item => "BEER", :num => 2, :cost => 20.00},
+  {:item => "BEER", :num => 2, :cost => 20.00}
+]
+
+checkout(cart, coupons)
