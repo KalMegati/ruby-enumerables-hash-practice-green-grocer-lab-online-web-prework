@@ -53,12 +53,12 @@ end
 
 def checkout(cart, coupons)
   cart_2 = consolidate_cart(cart)
-  puts cart_2
+
   apply_coupons(cart_2, coupons)
-  puts cart_2
+
   apply_clearance(cart_2)
-  puts cart_2
+
   receipt = register(cart_2)
-  puts receipt
+  return receipt
 end
 
