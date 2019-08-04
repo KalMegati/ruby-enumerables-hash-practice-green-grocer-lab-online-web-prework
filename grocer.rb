@@ -44,7 +44,7 @@ def register(cart)
   mathsplosion = cart.reduce(0) { |memo, (key, value)|
     memo += (value[:price] * value[:count])
   }
-  receipt = mathsplosion.round(2)
+  receipt = (0.1*mathsplosion).round(2)
   return receipt
 end  
 
