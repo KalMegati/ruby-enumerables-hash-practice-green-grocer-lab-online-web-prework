@@ -63,7 +63,7 @@ binding.pry
   apply_clearance(cart_2)
 binding.pry
   receipt = register(cart_2)
-binding.pry
+
   puts receipt
   return receipt
 end
