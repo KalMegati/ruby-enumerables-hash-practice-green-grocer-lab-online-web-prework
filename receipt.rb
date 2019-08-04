@@ -1,6 +1,6 @@
 def register(cart)
   receipt = cart.reduce(0) { |memo, (key, value)|
-    memo += value[:price]
+    memo += (value[:price] * value[:count])
   }
   puts receipt
 end  
