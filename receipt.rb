@@ -65,6 +65,7 @@ def checkout(cart, coupons)
   receipt = register(cart_2)
   
   return receipt
+  puts receipt
 end
 
 cart = [
