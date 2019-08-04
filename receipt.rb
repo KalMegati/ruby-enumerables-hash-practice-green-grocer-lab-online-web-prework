@@ -3,7 +3,7 @@ def register(cart)
     memo += (value[:price] * value[:count])
   }
   receipt = mathsplosion.round(2)
-  puts receipt
+  return receipt
 end  
 
 cart = {
