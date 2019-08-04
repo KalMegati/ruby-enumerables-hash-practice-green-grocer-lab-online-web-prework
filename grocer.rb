@@ -62,12 +62,3 @@ def checkout(cart, coupons)
   puts receipt
 end
 
-cart = [
-  {"AVOCADO" => {:price => 3.00, :clearance => true }},
-  {"AVOCADO" => {:price => 3.00, :clearance => true }},
-  {"KALE"    => {:price => 3.00, :clearance => false}}
-]
-
-coupons = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
-
-checkout(cart, coupons)
