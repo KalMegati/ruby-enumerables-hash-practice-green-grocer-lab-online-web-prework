@@ -18,7 +18,7 @@ end
 
 def apply_coupons(cart, coupons)
   coupons.length.times { |index|
-    if cart.key?(coupons[index][:item])
+    if cart.key?(coupons[index][:item]) && cart[coupons[index][:item]][:count] >= coupons[index][:num]
       cart[coupons[index][:item]][:count] -= coupons[index][:num]
       if cart.key?(coupons[index][:item] + " W/COUPON")
         cart[coupons[index][:item] + " W/COUPON"][:count] += coupons[index][:num]
