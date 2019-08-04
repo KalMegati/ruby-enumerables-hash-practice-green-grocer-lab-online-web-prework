@@ -41,8 +41,8 @@ def apply_clearance(cart)
 end
 
 def register(cart)
-  receipt = cart.reduce(0) { |memo, (key, value)
-    
+  receipt = cart.reduce(0) { |memo, (key, value)|
+    memo += 
   }
 end  
   
