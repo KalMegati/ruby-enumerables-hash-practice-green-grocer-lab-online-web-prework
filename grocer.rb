@@ -40,10 +40,13 @@ def apply_clearance(cart)
   cart
 end
 
-def receipt(cart)
-  
+def register(cart)
+  receipt = cart.reduce
 end  
   
+firstmost_name = bands.reduce(nil) do |memo, (key, value)|
+  # On the first pass, we don't have a name, so just grab the first one.
+  memo = value[0] if !memo  
 
 def checkout(cart, coupons)
   cart_2 = consolidate_cart(cart)
